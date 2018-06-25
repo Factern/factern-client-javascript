@@ -1,0 +1,22 @@
+{
+  "name": "factern-client",
+  "version": "0.9.0",
+  "description": "Factern API v2 Client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Factern/factern-client-javascript.git"
+  },
+  "keywords": [
+    "factern"
+  ],
+  "author": "Factern Ltd <discovery@factern.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Factern/factern-client-javascript/issues"
+  },
+  "homepage": "https://github.com/Factern/factern-client-javascript#readme"
+}
