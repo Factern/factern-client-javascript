@@ -1,8 +1,8 @@
 {
-  "name": "factern-client",
+  "name": "@factern/factern-client",
   "version": "0.9.0",
   "description": "Factern API v2 Client",
-  "main": "index.js",
+  "main": "dist/factern-client-bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
