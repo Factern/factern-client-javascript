@@ -4,5 +4,5 @@ deploy:
   api_key:
     secure: JA/992Hpb7UL5DhvaI7HSCoBqE2iUZI09sFS1uwsrbAjCXfnq1PiAS6mV6wNDyPsWLUGtxcRsHkyYkel6MbnhkQgtK/j7j0eu+Th8FYqmQSVRak/RFp9KAbkQ+/xrSVFeYlc7dz+U1U/6GnwCURkoL1+pl+RqvWMQN5dYLGyX/7ISqWTTinKbIMAa8C65SfuXRHpcQpbBJcN3m1MVbM+dTJekjb2H74cEGAb7q/anGKDOCGrmVn8FrKArko+xEU2HHJJy8xvAb/qJFRfoW32NTuos/FNjL3bigH1xYoYwffzDA2doNrqZnXAOC8bAEhGgQVENL+bGFRDERfis+CiENG1+swVs4STCmlHQUfUZqg3/iX7ZXA9m+A1xrer6m9omTsSXyrkVtLLsKMuCygP/ks0oMK2OJzwBOGL4/tWFEiFaUCSZZzPrfxMEVHNjhdTAvGyp4Ps4Wa07waRSXYwZclVL6TAgaLGV1ftB8Aq5LbYCNclSYrpWwhirPKtLsWJfg8X9+1a9XguM9UhKxonu5GE7PVknn5JqCFXuJDP9Lq8ikxuPkm77stcfftspxzdNZVPeYK3cGhmFyXS78y7ajJjXamNOXn3zhVW9uT1yRYHqTW7lTmW9AZPpyApX5bH3v/UwAYuL02qJ1mw96BsyujbY0PykrTVUjGUjuPRHsg=
   on:
-    tags: true
+    all_branches: true
     repo: Factern/factern-client-javascript
