@@ -4,7 +4,7 @@
   "description": "Factern API v2 Client",
   "main": "dist/factern-client-bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "mocha --timeout 15000 test"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,13 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Factern/factern-client-javascript/issues"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^5.1.1",
+    "randomstring": "^1.1.5",
+    "sinon": "^4.5.0",
+    "superagent": "^3.8.3"
   },
   "homepage": "https://next.factern.com/"
 }
