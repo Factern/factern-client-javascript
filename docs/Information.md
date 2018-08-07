@@ -4,6 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **fieldId** | **String** |  | 
-**storageId** | **String** |  | 
+**storageId** | **String** |  | [optional] 
 
 

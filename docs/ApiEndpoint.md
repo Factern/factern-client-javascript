@@ -4,8 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **body** | **String** |  | [optional] 
-**headers** | [**[HttpHeader]**](HttpHeader.md) |  | [optional] 
 **url** | **String** |  | 
+**responseTransform** | [**[TransformElement]**](TransformElement.md) |  | [optional] 
+**headers** | [**[HttpHeader]**](HttpHeader.md) |  | [optional] 
 **type** | **String** |  | [optional] 
 **method** | **String** |  | [optional] 
 

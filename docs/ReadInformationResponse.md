@@ -1,11 +1,9 @@
-# FacternApi.EntityListResponse
+# FacternApi.ReadInformationResponse
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**nodes** | [**[Entity]**](Entity.md) |  | 
-**nextToken** | **String** |  | [optional] 
-**totalResults** | **Number** |  | [optional] 
+**data** | **String** |  | [optional] 
 **summary** | [**Summary**](Summary.md) |  | [optional] 
 
 

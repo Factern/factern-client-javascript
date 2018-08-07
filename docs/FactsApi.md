@@ -30,6 +30,7 @@ Method | HTTP request | Description
 [**obliterate**](FactsApi.md#obliterate) | **POST** /obliterate | Obliterating Information Nodes
 [**permission**](FactsApi.md#permission) | **POST** /permission | Create Permission
 [**read**](FactsApi.md#read) | **POST** /read | Reading
+[**readInformation**](FactsApi.md#readInformation) | **POST** /readinformation | Read Information
 [**replaceInformation**](FactsApi.md#replaceInformation) | **POST** /replaceinformation | Replace
 [**requestPermission**](FactsApi.md#requestPermission) | **POST** /requestpermission | Request Permission
 [**resetLogin**](FactsApi.md#resetLogin) | **POST** /resetlogin | Changing Login Password
@@ -51,18 +52,16 @@ Create Member
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.CreateMemberRequest() // CreateMemberRequest | 
+  'createMemberRequest': new FacternApi.CreateMemberRequest() // CreateMemberRequest | 
 };
 apiInstance.addMember(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -78,7 +77,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**CreateMemberRequest**](CreateMemberRequest.md)|  | [optional] 
+ **createMemberRequest** | [**CreateMemberRequest**](CreateMemberRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -90,7 +89,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="bid"></a>
@@ -102,18 +101,16 @@ Create Bid
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.CreateBidRequest() // CreateBidRequest | 
+  'createBidRequest': new FacternApi.CreateBidRequest() // CreateBidRequest | 
 };
 apiInstance.bid(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -129,7 +126,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**CreateBidRequest**](CreateBidRequest.md)|  | [optional] 
+ **createBidRequest** | [**CreateBidRequest**](CreateBidRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -141,30 +138,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="callDelete"></a>
 # **callDelete**
-> ReadResponse callDelete(opts)
+> DeleteResponse callDelete(opts)
 
 Deleting
 
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.DeleteRequest() // DeleteRequest | 
+  'deleteRequest': new FacternApi.DeleteRequest() // DeleteRequest | 
 };
 apiInstance.callDelete(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -180,11 +175,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**DeleteRequest**](DeleteRequest.md)|  | [optional] 
+ **deleteRequest** | [**DeleteRequest**](DeleteRequest.md)|  | [optional] 
 
 ### Return type
 
-[**ReadResponse**](ReadResponse.md)
+[**DeleteResponse**](DeleteResponse.md)
 
 ### Authorization
 
@@ -192,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="createAlias"></a>
@@ -204,18 +199,16 @@ Create Alias
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.CreateAliasRequest() // CreateAliasRequest | 
+  'createAliasRequest': new FacternApi.CreateAliasRequest() // CreateAliasRequest | 
 };
 apiInstance.createAlias(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -231,7 +224,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**CreateAliasRequest**](CreateAliasRequest.md)|  | [optional] 
+ **createAliasRequest** | [**CreateAliasRequest**](CreateAliasRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -243,7 +236,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="createApplication"></a>
@@ -255,18 +248,16 @@ Create Application
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.CreateApplicationRequest() // CreateApplicationRequest | 
+  'createApplicationRequest': new FacternApi.CreateApplicationRequest() // CreateApplicationRequest | 
 };
 apiInstance.createApplication(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -282,7 +273,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**CreateApplicationRequest**](CreateApplicationRequest.md)|  | [optional] 
+ **createApplicationRequest** | [**CreateApplicationRequest**](CreateApplicationRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -294,7 +285,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="createDomain"></a>
@@ -306,18 +297,16 @@ Create Domain
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.CreateDomainRequest() // CreateDomainRequest | 
+  'createDomainRequest': new FacternApi.CreateDomainRequest() // CreateDomainRequest | 
 };
 apiInstance.createDomain(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -333,7 +322,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**CreateDomainRequest**](CreateDomainRequest.md)|  | [optional] 
+ **createDomainRequest** | [**CreateDomainRequest**](CreateDomainRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -345,7 +334,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="createEntity"></a>
@@ -357,18 +346,16 @@ Create Entity
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.CreateInDomainRequest() // CreateInDomainRequest | 
+  'createEntityRequest': new FacternApi.CreateEntityRequest() // CreateEntityRequest | 
 };
 apiInstance.createEntity(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -384,7 +371,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**CreateInDomainRequest**](CreateInDomainRequest.md)|  | [optional] 
+ **createEntityRequest** | [**CreateEntityRequest**](CreateEntityRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -396,7 +383,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="createField"></a>
@@ -408,18 +395,16 @@ Create Field
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.CreateFieldRequest() // CreateFieldRequest | 
+  'createFieldRequest': new FacternApi.CreateFieldRequest() // CreateFieldRequest | 
 };
 apiInstance.createField(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -435,7 +420,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**CreateFieldRequest**](CreateFieldRequest.md)|  | [optional] 
+ **createFieldRequest** | [**CreateFieldRequest**](CreateFieldRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -447,7 +432,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="createFilter"></a>
@@ -459,18 +444,16 @@ Create Filter
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.CreateFilterRequest() // CreateFilterRequest | 
+  'createFilterRequest': new FacternApi.CreateFilterRequest() // CreateFilterRequest | 
 };
 apiInstance.createFilter(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -486,7 +469,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**CreateFilterRequest**](CreateFilterRequest.md)|  | [optional] 
+ **createFilterRequest** | [**CreateFilterRequest**](CreateFilterRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -498,7 +481,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="createGroup"></a>
@@ -510,18 +493,16 @@ Create Group
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.CreateGroupRequest() // CreateGroupRequest | 
+  'createGroupRequest': new FacternApi.CreateGroupRequest() // CreateGroupRequest | 
 };
 apiInstance.createGroup(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -537,7 +518,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**CreateGroupRequest**](CreateGroupRequest.md)|  | [optional] 
+ **createGroupRequest** | [**CreateGroupRequest**](CreateGroupRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -549,7 +530,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="createInformation"></a>
@@ -561,18 +542,16 @@ Create Information
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.CreateInformationRequest() // CreateInformationRequest | 
+  'createInformationRequest': new FacternApi.CreateInformationRequest() // CreateInformationRequest | 
 };
 apiInstance.createInformation(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -588,7 +567,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**CreateInformationRequest**](CreateInformationRequest.md)|  | [optional] 
+ **createInformationRequest** | [**CreateInformationRequest**](CreateInformationRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -600,7 +579,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="createInterface"></a>
@@ -612,18 +591,16 @@ Create Interface
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.CreateInterfaceRequest() // CreateInterfaceRequest | 
+  'createInterfaceRequest': new FacternApi.CreateInterfaceRequest() // CreateInterfaceRequest | 
 };
 apiInstance.createInterface(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -639,7 +616,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**CreateInterfaceRequest**](CreateInterfaceRequest.md)|  | [optional] 
+ **createInterfaceRequest** | [**CreateInterfaceRequest**](CreateInterfaceRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -651,7 +628,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="createLabelList"></a>
@@ -663,18 +640,16 @@ Create Label List
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.CreateLabelListRequest() // CreateLabelListRequest | 
+  'createLabelListRequest': new FacternApi.CreateLabelListRequest() // CreateLabelListRequest | 
 };
 apiInstance.createLabelList(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -690,7 +665,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**CreateLabelListRequest**](CreateLabelListRequest.md)|  | [optional] 
+ **createLabelListRequest** | [**CreateLabelListRequest**](CreateLabelListRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -702,7 +677,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="createLogin"></a>
@@ -714,18 +689,16 @@ Create Login
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.CreateLoginRequest() // CreateLoginRequest | 
+  'createLoginRequest': new FacternApi.CreateLoginRequest() // CreateLoginRequest | 
 };
 apiInstance.createLogin(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -741,7 +714,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**CreateLoginRequest**](CreateLoginRequest.md)|  | [optional] 
+ **createLoginRequest** | [**CreateLoginRequest**](CreateLoginRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -753,7 +726,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="createMirror"></a>
@@ -765,18 +738,16 @@ Create Mirror
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.CreateMirrorRequest() // CreateMirrorRequest | 
+  'createMirrorRequest': new FacternApi.CreateMirrorRequest() // CreateMirrorRequest | 
 };
 apiInstance.createMirror(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -792,7 +763,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**CreateMirrorRequest**](CreateMirrorRequest.md)|  | [optional] 
+ **createMirrorRequest** | [**CreateMirrorRequest**](CreateMirrorRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -804,7 +775,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="createPrice"></a>
@@ -816,18 +787,16 @@ Create Price
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.CreatePriceRequest() // CreatePriceRequest | 
+  'createPriceRequest': new FacternApi.CreatePriceRequest() // CreatePriceRequest | 
 };
 apiInstance.createPrice(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -843,7 +812,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**CreatePriceRequest**](CreatePriceRequest.md)|  | [optional] 
+ **createPriceRequest** | [**CreatePriceRequest**](CreatePriceRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -855,7 +824,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="createScope"></a>
@@ -867,18 +836,16 @@ Create Scope
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.CreateScopeRequest() // CreateScopeRequest | 
+  'createScopeRequest': new FacternApi.CreateScopeRequest() // CreateScopeRequest | 
 };
 apiInstance.createScope(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -894,7 +861,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**CreateScopeRequest**](CreateScopeRequest.md)|  | [optional] 
+ **createScopeRequest** | [**CreateScopeRequest**](CreateScopeRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -906,7 +873,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="createStatement"></a>
@@ -918,18 +885,16 @@ Create Statement
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.AddStatementRequest() // AddStatementRequest | 
+  'addStatementRequest': new FacternApi.AddStatementRequest() // AddStatementRequest | 
 };
 apiInstance.createStatement(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -945,7 +910,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**AddStatementRequest**](AddStatementRequest.md)|  | [optional] 
+ **addStatementRequest** | [**AddStatementRequest**](AddStatementRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -957,7 +922,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="createTemplate"></a>
@@ -969,18 +934,16 @@ Create Template
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.CreateTemplateRequest() // CreateTemplateRequest | 
+  'createTemplateRequest': new FacternApi.CreateTemplateRequest() // CreateTemplateRequest | 
 };
 apiInstance.createTemplate(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -996,7 +959,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**CreateTemplateRequest**](CreateTemplateRequest.md)|  | [optional] 
+ **createTemplateRequest** | [**CreateTemplateRequest**](CreateTemplateRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -1008,7 +971,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="deleteNode"></a>
@@ -1020,18 +983,16 @@ Delete Node
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.NodeIdRequest() // NodeIdRequest | 
+  'nodeIdRequest': new FacternApi.NodeIdRequest() // NodeIdRequest | 
 };
 apiInstance.deleteNode(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -1047,7 +1008,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**NodeIdRequest**](NodeIdRequest.md)|  | [optional] 
+ **nodeIdRequest** | [**NodeIdRequest**](NodeIdRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -1059,7 +1020,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="describe"></a>
@@ -1071,18 +1032,16 @@ Describe
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.DescribeRequest() // DescribeRequest | 
+  'describeRequest': new FacternApi.DescribeRequest() // DescribeRequest | 
 };
 apiInstance.describe(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -1098,7 +1057,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**DescribeRequest**](DescribeRequest.md)|  | [optional] 
+ **describeRequest** | [**DescribeRequest**](DescribeRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -1110,30 +1069,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="history"></a>
 # **history**
-> InformationListResponse history(opts)
+> NodeListing history(opts)
 
 History
 
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.NodeIdRequest() // NodeIdRequest | 
+  'nodeIdRequest': new FacternApi.NodeIdRequest() // NodeIdRequest | 
 };
 apiInstance.history(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -1149,11 +1106,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**NodeIdRequest**](NodeIdRequest.md)|  | [optional] 
+ **nodeIdRequest** | [**NodeIdRequest**](NodeIdRequest.md)|  | [optional] 
 
 ### Return type
 
-[**InformationListResponse**](InformationListResponse.md)
+[**NodeListing**](NodeListing.md)
 
 ### Authorization
 
@@ -1161,7 +1118,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="label"></a>
@@ -1173,18 +1130,16 @@ Label a Node
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.AddLabelRequest() // AddLabelRequest | 
+  'addLabelRequest': new FacternApi.AddLabelRequest() // AddLabelRequest | 
 };
 apiInstance.label(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -1200,7 +1155,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**AddLabelRequest**](AddLabelRequest.md)|  | [optional] 
+ **addLabelRequest** | [**AddLabelRequest**](AddLabelRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -1212,7 +1167,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="obliterate"></a>
@@ -1224,18 +1179,16 @@ Obliterating Information Nodes
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.NodeIdRequest() // NodeIdRequest | 
+  'nodeIdRequest': new FacternApi.NodeIdRequest() // NodeIdRequest | 
 };
 apiInstance.obliterate(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -1251,7 +1204,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**NodeIdRequest**](NodeIdRequest.md)|  | [optional] 
+ **nodeIdRequest** | [**NodeIdRequest**](NodeIdRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -1263,7 +1216,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="permission"></a>
@@ -1275,18 +1228,16 @@ Create Permission
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.CreatePermissionRequest() // CreatePermissionRequest | 
+  'createPermissionRequest': new FacternApi.CreatePermissionRequest() // CreatePermissionRequest | 
 };
 apiInstance.permission(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -1302,7 +1253,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**CreatePermissionRequest**](CreatePermissionRequest.md)|  | [optional] 
+ **createPermissionRequest** | [**CreatePermissionRequest**](CreatePermissionRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -1314,7 +1265,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="read"></a>
@@ -1326,18 +1277,16 @@ Reading
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.ReadRequest() // ReadRequest | 
+  'readRequest': new FacternApi.ReadRequest() // ReadRequest | 
 };
 apiInstance.read(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -1353,7 +1302,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**ReadRequest**](ReadRequest.md)|  | [optional] 
+ **readRequest** | [**ReadRequest**](ReadRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -1365,30 +1314,77 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="readInformation"></a>
+# **readInformation**
+> ReadInformationResponse readInformation(opts)
+
+Read Information
+
+### Example
+```javascript
+var FacternApi = require('factern_api');
+var defaultClient = FacternApi.ApiClient.instance;
+// Configure OAuth2 access token for authorization: OAuth2
+var OAuth2 = defaultClient.authentications['OAuth2'];
+OAuth2.accessToken = 'YOUR ACCESS TOKEN';
+
+var apiInstance = new FacternApi.FactsApi();
+var opts = {
+  'login': "login_example", // String | 
+  'representing': "representing_example", // String | 
+  'readInformationRequest': new FacternApi.ReadInformationRequest() // ReadInformationRequest | 
+};
+apiInstance.readInformation(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **login** | **String**|  | [optional] 
+ **representing** | **String**|  | [optional] 
+ **readInformationRequest** | [**ReadInformationRequest**](ReadInformationRequest.md)|  | [optional] 
+
+### Return type
+
+[**ReadInformationResponse**](ReadInformationResponse.md)
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="replaceInformation"></a>
 # **replaceInformation**
-> DescribeResponse replaceInformation(opts)
+> Information replaceInformation(opts)
 
 Replace
 
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.ReplaceFieldRequest() // ReplaceFieldRequest | 
+  'replaceFieldRequest': new FacternApi.ReplaceFieldRequest() // ReplaceFieldRequest | 
 };
 apiInstance.replaceInformation(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -1404,11 +1400,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**ReplaceFieldRequest**](ReplaceFieldRequest.md)|  | [optional] 
+ **replaceFieldRequest** | [**ReplaceFieldRequest**](ReplaceFieldRequest.md)|  | [optional] 
 
 ### Return type
 
-[**DescribeResponse**](DescribeResponse.md)
+[**Information**](Information.md)
 
 ### Authorization
 
@@ -1416,7 +1412,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="requestPermission"></a>
@@ -1428,18 +1424,16 @@ Request Permission
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.NodeIdRequest() // NodeIdRequest | 
+  'nodeIdRequest': new FacternApi.NodeIdRequest() // NodeIdRequest | 
 };
 apiInstance.requestPermission(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -1455,7 +1449,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**NodeIdRequest**](NodeIdRequest.md)|  | [optional] 
+ **nodeIdRequest** | [**NodeIdRequest**](NodeIdRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -1467,7 +1461,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="resetLogin"></a>
@@ -1479,18 +1473,16 @@ Changing Login Password
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.ResetLoginCredentialsRequest() // ResetLoginCredentialsRequest | 
+  'resetLoginCredentialsRequest': new FacternApi.ResetLoginCredentialsRequest() // ResetLoginCredentialsRequest | 
 };
 apiInstance.resetLogin(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -1506,7 +1498,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**ResetLoginCredentialsRequest**](ResetLoginCredentialsRequest.md)|  | [optional] 
+ **resetLoginCredentialsRequest** | [**ResetLoginCredentialsRequest**](ResetLoginCredentialsRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -1518,7 +1510,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="searchAlias"></a>
@@ -1530,18 +1522,16 @@ Search For Alias
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.SearchAliasRequest() // SearchAliasRequest | 
+  'searchAliasRequest': new FacternApi.SearchAliasRequest() // SearchAliasRequest | 
 };
 apiInstance.searchAlias(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -1557,7 +1547,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**SearchAliasRequest**](SearchAliasRequest.md)|  | [optional] 
+ **searchAliasRequest** | [**SearchAliasRequest**](SearchAliasRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -1569,7 +1559,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="searchEntity"></a>
@@ -1581,18 +1571,16 @@ Search For Entity
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.SearchEntityRequest() // SearchEntityRequest | 
+  'searchEntityRequest': new FacternApi.SearchEntityRequest() // SearchEntityRequest | 
 };
 apiInstance.searchEntity(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -1608,7 +1596,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**SearchEntityRequest**](SearchEntityRequest.md)|  | [optional] 
+ **searchEntityRequest** | [**SearchEntityRequest**](SearchEntityRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -1620,7 +1608,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="settleAccount"></a>
@@ -1632,18 +1620,16 @@ Settle Account
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.SettleAccountRequest() // SettleAccountRequest | 
+  'settleAccountRequest': new FacternApi.SettleAccountRequest() // SettleAccountRequest | 
 };
 apiInstance.settleAccount(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -1659,7 +1645,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**SettleAccountRequest**](SettleAccountRequest.md)|  | [optional] 
+ **settleAccountRequest** | [**SettleAccountRequest**](SettleAccountRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -1671,7 +1657,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="updateApplication"></a>
@@ -1683,18 +1669,16 @@ Resetting Application Secret
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.UpdateApplicationRequest() // UpdateApplicationRequest | 
+  'updateApplicationRequest': new FacternApi.UpdateApplicationRequest() // UpdateApplicationRequest | 
 };
 apiInstance.updateApplication(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -1710,7 +1694,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**UpdateApplicationRequest**](UpdateApplicationRequest.md)|  | [optional] 
+ **updateApplicationRequest** | [**UpdateApplicationRequest**](UpdateApplicationRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -1722,7 +1706,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="updateStatus"></a>
@@ -1734,18 +1718,16 @@ Enabling/Disabling Nodes
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.UpdateStatusRequest() // UpdateStatusRequest | 
+  'updateStatusRequest': new FacternApi.UpdateStatusRequest() // UpdateStatusRequest | 
 };
 apiInstance.updateStatus(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -1761,7 +1743,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**UpdateStatusRequest**](UpdateStatusRequest.md)|  | [optional] 
+ **updateStatusRequest** | [**UpdateStatusRequest**](UpdateStatusRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -1773,7 +1755,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="watch"></a>
@@ -1785,18 +1767,16 @@ Create Watch Trigger
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.CreateWatchRequest() // CreateWatchRequest | 
+  'createWatchRequest': new FacternApi.CreateWatchRequest() // CreateWatchRequest | 
 };
 apiInstance.watch(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -1812,7 +1792,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**CreateWatchRequest**](CreateWatchRequest.md)|  | [optional] 
+ **createWatchRequest** | [**CreateWatchRequest**](CreateWatchRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -1824,7 +1804,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="write"></a>
@@ -1836,18 +1816,16 @@ Writing by Template
 ### Example
 ```javascript
 var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.default;
-
+var defaultClient = FacternApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2
 var OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new FacternApi.FactsApi();
-
-var opts = { 
+var opts = {
   'login': "login_example", // String | 
   'representing': "representing_example", // String | 
-  'body': new FacternApi.WriteRequest() // WriteRequest | 
+  'writeRequest': new FacternApi.WriteRequest() // WriteRequest | 
 };
 apiInstance.write(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -1863,7 +1841,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **login** | **String**|  | [optional] 
  **representing** | **String**|  | [optional] 
- **body** | [**WriteRequest**](WriteRequest.md)|  | [optional] 
+ **writeRequest** | [**WriteRequest**](WriteRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -1875,6 +1853,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

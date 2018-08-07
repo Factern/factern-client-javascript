@@ -1,11 +1,9 @@
-# FacternApi.EntityListResponse
+# FacternApi.DeleteResponse
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**nodes** | [**[Entity]**](Entity.md) |  | 
-**nextToken** | **String** |  | [optional] 
-**totalResults** | **Number** |  | [optional] 
+**items** | [**[DeletedStatusItem]**](DeletedStatusItem.md) |  | [optional] 
 **summary** | [**Summary**](Summary.md) |  | [optional] 
 
 
