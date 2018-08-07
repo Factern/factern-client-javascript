@@ -1,3 +1,4 @@
+
 # FacternApi.FactsApi
 
 All URIs are relative to *https://api.factern.com/v2*
@@ -49,28 +50,6 @@ Method | HTTP request | Description
 
 Create Member
 
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'createMemberRequest': new FacternApi.CreateMemberRequest() // CreateMemberRequest | 
-};
-apiInstance.addMember(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -97,28 +76,6 @@ Name | Type | Description  | Notes
 > StandardNodeResponse bid(opts)
 
 Create Bid
-
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'createBidRequest': new FacternApi.CreateBidRequest() // CreateBidRequest | 
-};
-apiInstance.bid(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
 
 ### Parameters
 
@@ -147,28 +104,6 @@ Name | Type | Description  | Notes
 
 Deleting
 
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'deleteRequest': new FacternApi.DeleteRequest() // DeleteRequest | 
-};
-apiInstance.callDelete(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -195,28 +130,6 @@ Name | Type | Description  | Notes
 > CreateAliasResponse createAlias(opts)
 
 Create Alias
-
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'createAliasRequest': new FacternApi.CreateAliasRequest() // CreateAliasRequest | 
-};
-apiInstance.createAlias(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
 
 ### Parameters
 
@@ -245,28 +158,6 @@ Name | Type | Description  | Notes
 
 Create Application
 
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'createApplicationRequest': new FacternApi.CreateApplicationRequest() // CreateApplicationRequest | 
-};
-apiInstance.createApplication(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -293,28 +184,6 @@ Name | Type | Description  | Notes
 > CreateDomainResponse createDomain(opts)
 
 Create Domain
-
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'createDomainRequest': new FacternApi.CreateDomainRequest() // CreateDomainRequest | 
-};
-apiInstance.createDomain(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
 
 ### Parameters
 
@@ -343,28 +212,6 @@ Name | Type | Description  | Notes
 
 Create Entity
 
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'createEntityRequest': new FacternApi.CreateEntityRequest() // CreateEntityRequest | 
-};
-apiInstance.createEntity(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -391,28 +238,6 @@ Name | Type | Description  | Notes
 > CreateFieldResponse createField(opts)
 
 Create Field
-
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'createFieldRequest': new FacternApi.CreateFieldRequest() // CreateFieldRequest | 
-};
-apiInstance.createField(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
 
 ### Parameters
 
@@ -441,28 +266,6 @@ Name | Type | Description  | Notes
 
 Create Filter
 
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'createFilterRequest': new FacternApi.CreateFilterRequest() // CreateFilterRequest | 
-};
-apiInstance.createFilter(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -489,28 +292,6 @@ Name | Type | Description  | Notes
 > CreateGroupResponse createGroup(opts)
 
 Create Group
-
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'createGroupRequest': new FacternApi.CreateGroupRequest() // CreateGroupRequest | 
-};
-apiInstance.createGroup(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
 
 ### Parameters
 
@@ -539,28 +320,6 @@ Name | Type | Description  | Notes
 
 Create Information
 
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'createInformationRequest': new FacternApi.CreateInformationRequest() // CreateInformationRequest | 
-};
-apiInstance.createInformation(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -587,28 +346,6 @@ Name | Type | Description  | Notes
 > CreateInterfaceResponse createInterface(opts)
 
 Create Interface
-
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'createInterfaceRequest': new FacternApi.CreateInterfaceRequest() // CreateInterfaceRequest | 
-};
-apiInstance.createInterface(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
 
 ### Parameters
 
@@ -637,28 +374,6 @@ Name | Type | Description  | Notes
 
 Create Label List
 
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'createLabelListRequest': new FacternApi.CreateLabelListRequest() // CreateLabelListRequest | 
-};
-apiInstance.createLabelList(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -685,28 +400,6 @@ Name | Type | Description  | Notes
 > CreateLoginResponse createLogin(opts)
 
 Create Login
-
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'createLoginRequest': new FacternApi.CreateLoginRequest() // CreateLoginRequest | 
-};
-apiInstance.createLogin(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
 
 ### Parameters
 
@@ -735,28 +428,6 @@ Name | Type | Description  | Notes
 
 Create Mirror
 
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'createMirrorRequest': new FacternApi.CreateMirrorRequest() // CreateMirrorRequest | 
-};
-apiInstance.createMirror(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -783,28 +454,6 @@ Name | Type | Description  | Notes
 > CreatePriceResponse createPrice(opts)
 
 Create Price
-
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'createPriceRequest': new FacternApi.CreatePriceRequest() // CreatePriceRequest | 
-};
-apiInstance.createPrice(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
 
 ### Parameters
 
@@ -833,28 +482,6 @@ Name | Type | Description  | Notes
 
 Create Scope
 
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'createScopeRequest': new FacternApi.CreateScopeRequest() // CreateScopeRequest | 
-};
-apiInstance.createScope(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -881,28 +508,6 @@ Name | Type | Description  | Notes
 > AddStatementResponse createStatement(opts)
 
 Create Statement
-
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'addStatementRequest': new FacternApi.AddStatementRequest() // AddStatementRequest | 
-};
-apiInstance.createStatement(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
 
 ### Parameters
 
@@ -931,28 +536,6 @@ Name | Type | Description  | Notes
 
 Create Template
 
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'createTemplateRequest': new FacternApi.CreateTemplateRequest() // CreateTemplateRequest | 
-};
-apiInstance.createTemplate(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -979,28 +562,6 @@ Name | Type | Description  | Notes
 > StandardNodeResponse deleteNode(opts)
 
 Delete Node
-
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'nodeIdRequest': new FacternApi.NodeIdRequest() // NodeIdRequest | 
-};
-apiInstance.deleteNode(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
 
 ### Parameters
 
@@ -1029,28 +590,6 @@ Name | Type | Description  | Notes
 
 Describe
 
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'describeRequest': new FacternApi.DescribeRequest() // DescribeRequest | 
-};
-apiInstance.describe(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1077,28 +616,6 @@ Name | Type | Description  | Notes
 > NodeListing history(opts)
 
 History
-
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'nodeIdRequest': new FacternApi.NodeIdRequest() // NodeIdRequest | 
-};
-apiInstance.history(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
 
 ### Parameters
 
@@ -1127,28 +644,6 @@ Name | Type | Description  | Notes
 
 Label a Node
 
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'addLabelRequest': new FacternApi.AddLabelRequest() // AddLabelRequest | 
-};
-apiInstance.label(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1175,28 +670,6 @@ Name | Type | Description  | Notes
 > StandardNodeResponse obliterate(opts)
 
 Obliterating Information Nodes
-
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'nodeIdRequest': new FacternApi.NodeIdRequest() // NodeIdRequest | 
-};
-apiInstance.obliterate(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
 
 ### Parameters
 
@@ -1225,28 +698,6 @@ Name | Type | Description  | Notes
 
 Create Permission
 
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'createPermissionRequest': new FacternApi.CreatePermissionRequest() // CreatePermissionRequest | 
-};
-apiInstance.permission(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1273,28 +724,6 @@ Name | Type | Description  | Notes
 > ReadResponse read(opts)
 
 Reading
-
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'readRequest': new FacternApi.ReadRequest() // ReadRequest | 
-};
-apiInstance.read(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
 
 ### Parameters
 
@@ -1323,28 +752,6 @@ Name | Type | Description  | Notes
 
 Read Information
 
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'readInformationRequest': new FacternApi.ReadInformationRequest() // ReadInformationRequest | 
-};
-apiInstance.readInformation(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1371,28 +778,6 @@ Name | Type | Description  | Notes
 > Information replaceInformation(opts)
 
 Replace
-
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'replaceFieldRequest': new FacternApi.ReplaceFieldRequest() // ReplaceFieldRequest | 
-};
-apiInstance.replaceInformation(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
 
 ### Parameters
 
@@ -1421,28 +806,6 @@ Name | Type | Description  | Notes
 
 Request Permission
 
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'nodeIdRequest': new FacternApi.NodeIdRequest() // NodeIdRequest | 
-};
-apiInstance.requestPermission(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1469,28 +832,6 @@ Name | Type | Description  | Notes
 > ResetLoginResponse resetLogin(opts)
 
 Changing Login Password
-
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'resetLoginCredentialsRequest': new FacternApi.ResetLoginCredentialsRequest() // ResetLoginCredentialsRequest | 
-};
-apiInstance.resetLogin(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
 
 ### Parameters
 
@@ -1519,28 +860,6 @@ Name | Type | Description  | Notes
 
 Search For Alias
 
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'searchAliasRequest': new FacternApi.SearchAliasRequest() // SearchAliasRequest | 
-};
-apiInstance.searchAlias(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1567,28 +886,6 @@ Name | Type | Description  | Notes
 > EntityListResponse searchEntity(opts)
 
 Search For Entity
-
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'searchEntityRequest': new FacternApi.SearchEntityRequest() // SearchEntityRequest | 
-};
-apiInstance.searchEntity(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
 
 ### Parameters
 
@@ -1617,28 +914,6 @@ Name | Type | Description  | Notes
 
 Settle Account
 
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'settleAccountRequest': new FacternApi.SettleAccountRequest() // SettleAccountRequest | 
-};
-apiInstance.settleAccount(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1665,28 +940,6 @@ Name | Type | Description  | Notes
 > UpdateApplicationResponse updateApplication(opts)
 
 Resetting Application Secret
-
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'updateApplicationRequest': new FacternApi.UpdateApplicationRequest() // UpdateApplicationRequest | 
-};
-apiInstance.updateApplication(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
 
 ### Parameters
 
@@ -1715,28 +968,6 @@ Name | Type | Description  | Notes
 
 Enabling/Disabling Nodes
 
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'updateStatusRequest': new FacternApi.UpdateStatusRequest() // UpdateStatusRequest | 
-};
-apiInstance.updateStatus(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1764,28 +995,6 @@ Name | Type | Description  | Notes
 
 Create Watch Trigger
 
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'createWatchRequest': new FacternApi.CreateWatchRequest() // CreateWatchRequest | 
-};
-apiInstance.watch(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1812,28 +1021,6 @@ Name | Type | Description  | Notes
 > WriteResponse write(opts)
 
 Writing by Template
-
-### Example
-```javascript
-var FacternApi = require('factern_api');
-var defaultClient = FacternApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-var apiInstance = new FacternApi.FactsApi();
-var opts = {
-  'login': "login_example", // String | 
-  'representing': "representing_example", // String | 
-  'writeRequest': new FacternApi.WriteRequest() // WriteRequest | 
-};
-apiInstance.write(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
 
 ### Parameters
 
