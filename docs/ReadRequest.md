@@ -3,10 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**callback** | **String** |  | [optional] 
-**templateId** | **String** |  | [optional] 
-**nodeId** | **String** |  | 
-**template** | **[Object]** |  | [optional] 
 **defaultStorageId** | **String** |  | [optional] 
+**transform** | [**[TransformElement]**](TransformElement.md) |  | [optional] 
+**nodeId** | **String** |  | 
+**callback** | **String** |  | [optional] 
+**template** | **[Object]** |  | [optional] 
+**templateId** | **String** |  | [optional] 
 
 

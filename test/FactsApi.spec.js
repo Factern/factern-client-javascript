@@ -762,10 +762,10 @@ describe('Create Permission', function() {
       const entityId = responseData.data.nodeId;
 
       const policy = new FacternClient.PermissionPolicyDocument(
-        FacternClient.PermissionEffect.Allow,
         []
       );
       policy.actions = [ FacternClient.PermissionAction.Read ];
+      policy.effect = FacternClient.PermissionEffect.Allow;
       const policyRequest = new FacternClient.CreatePermissionRequest(policy, entityId);
 
       callFacternEndpointPromise(FactsApi.permission.bind(FactsApi), policyRequest)
@@ -982,10 +982,9 @@ describe('Writing by Template', function() {
 });
 
 function callFacternEndpointPromise(endpoint, body) {
-  return endpoint({
+  return endpoint(body, {
     login: LOGIN,
-    representing: LOGIN,
-    body: body
+    representing: LOGIN
   });
 }
 
@@ -1001,10 +1000,9 @@ function createEntity(name, callback) {
     body['name'] = name;
   }
 
-  FactsApi.createEntity({
+  FactsApi.createEntity(body, {
     login: LOGIN,
-    representing: LOGIN,
-    body: body
+    representing: LOGIN
   }, function(err, data, response) {
     if (callback) {
       callback(err, data, response);
@@ -1013,7 +1011,7 @@ function createEntity(name, callback) {
 }
 
 function verifyEntity(entity) {
-  verifyFields(entity, ['name', 'timestamp', 'nodeId', 'agent', 'batchId', 'factType', 'parentId']);
+  verifyFields(entity, ['timestamp', 'nodeId', 'agent', 'batchId', 'factType', 'parentId']);
 
   assert.equal('Entity', entity.factType);
 }

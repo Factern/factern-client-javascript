@@ -1,9 +1,8 @@
-# FacternApi.DomainNode
+# FacternApi.CreateEntityRequest
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**description** | **String** |  | [optional] 
-**name** | **String** |  | 
+**domainId** | **String** |  | [optional] 
 
 

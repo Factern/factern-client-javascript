@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**uniqueByParent** | **Boolean** |  | 
-**searchable** | **Boolean** |  | 
-**branch** | **Boolean** |  | 
+**uniqueByParent** | **Boolean** |  | [optional] 
+**searchable** | **Boolean** |  | [optional] 
+**branch** | **Boolean** |  | [optional] 
 
 

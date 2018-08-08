@@ -4,6 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **memberIds** | **[String]** |  | 
-**memberFactType** | **String** |  | 
+**memberFactType** | **String** |  | [optional] 
 
 

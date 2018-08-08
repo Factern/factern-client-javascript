@@ -1,10 +1,13 @@
 {
   "name": "@factern/factern-client",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "description": "Factern API v2 Client",
   "main": "dist/factern-client-bundle.js",
   "scripts": {
     "test": "mocha --timeout 15000 test"
+  },
+  "browser": {
+    "fs": false
   },
   "repository": {
     "type": "git",
@@ -18,12 +21,14 @@
   "bugs": {
     "url": "https://github.com/Factern/factern-client-javascript/issues"
   },
+  "dependencies": {
+    "superagent": "^3.8.3"
+  },
   "devDependencies": {
     "expect.js": "^0.3.1",
     "mocha": "^5.1.1",
     "randomstring": "^1.1.5",
-    "sinon": "^4.5.0",
-    "superagent": "^3.8.3"
+    "sinon": "^4.5.0"
   },
   "homepage": "https://next.factern.com/"
 }

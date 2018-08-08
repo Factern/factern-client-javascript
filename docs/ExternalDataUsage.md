@@ -1,9 +1,9 @@
-# FacternApi.DomainNode
+# FacternApi.ExternalDataUsage
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**description** | **String** |  | [optional] 
-**name** | **String** |  | 
+**bytesRead** | **Number** |  | 
+**bytesWritten** | **Number** |  | 
 
 
