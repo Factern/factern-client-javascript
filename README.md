@@ -10,7 +10,7 @@ API version: 2.0.0
 ### npm
 
 ```shell
-npm install factern_api --save
+npm install @factern/factern-client --save
 ```
 
 ## Getting Started
@@ -47,43 +47,43 @@ All URIs are relative to *https://api.factern.com/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*FacternApi.FactsApi* | [**addMember**](docs/FactsApi.md#addMember) | **POST** /createmember | Create Member
-*FacternApi.FactsApi* | [**bid**](docs/FactsApi.md#bid) | **POST** /createbid | Create Bid
-*FacternApi.FactsApi* | [**callDelete**](docs/FactsApi.md#callDelete) | **POST** /delete | Deleting
-*FacternApi.FactsApi* | [**createAlias**](docs/FactsApi.md#createAlias) | **POST** /createalias | Create Alias
-*FacternApi.FactsApi* | [**createApplication**](docs/FactsApi.md#createApplication) | **POST** /createapplication | Create Application
-*FacternApi.FactsApi* | [**createDomain**](docs/FactsApi.md#createDomain) | **POST** /createdomain | Create Domain
-*FacternApi.FactsApi* | [**createEntity**](docs/FactsApi.md#createEntity) | **POST** /createentity | Create Entity
-*FacternApi.FactsApi* | [**createField**](docs/FactsApi.md#createField) | **POST** /createfield | Create Field
-*FacternApi.FactsApi* | [**createFilter**](docs/FactsApi.md#createFilter) | **POST** /createfilter | Create Filter
-*FacternApi.FactsApi* | [**createGroup**](docs/FactsApi.md#createGroup) | **POST** /creategroup | Create Group
-*FacternApi.FactsApi* | [**createInformation**](docs/FactsApi.md#createInformation) | **POST** /createinformation | Create Information
-*FacternApi.FactsApi* | [**createInterface**](docs/FactsApi.md#createInterface) | **POST** /createinterface | Create Interface
-*FacternApi.FactsApi* | [**createLabelList**](docs/FactsApi.md#createLabelList) | **POST** /createlabellist | Create Label List
-*FacternApi.FactsApi* | [**createLogin**](docs/FactsApi.md#createLogin) | **POST** /createlogin | Create Login
-*FacternApi.FactsApi* | [**createMirror**](docs/FactsApi.md#createMirror) | **POST** /createmirror | Create Mirror
-*FacternApi.FactsApi* | [**createPrice**](docs/FactsApi.md#createPrice) | **POST** /createprice | Create Price
-*FacternApi.FactsApi* | [**createScope**](docs/FactsApi.md#createScope) | **POST** /createscope | Create Scope
-*FacternApi.FactsApi* | [**createStatement**](docs/FactsApi.md#createStatement) | **POST** /createstatement | Create Statement
-*FacternApi.FactsApi* | [**createTemplate**](docs/FactsApi.md#createTemplate) | **POST** /createtemplate | Create Template
-*FacternApi.FactsApi* | [**deleteNode**](docs/FactsApi.md#deleteNode) | **POST** /deletenode | Delete Node
-*FacternApi.FactsApi* | [**describe**](docs/FactsApi.md#describe) | **POST** /describe | Describe
-*FacternApi.FactsApi* | [**history**](docs/FactsApi.md#history) | **POST** /history | History
-*FacternApi.FactsApi* | [**label**](docs/FactsApi.md#label) | **POST** /label | Label a Node
-*FacternApi.FactsApi* | [**obliterate**](docs/FactsApi.md#obliterate) | **POST** /obliterate | Obliterating Information Nodes
-*FacternApi.FactsApi* | [**permission**](docs/FactsApi.md#permission) | **POST** /permission | Create Permission
-*FacternApi.FactsApi* | [**read**](docs/FactsApi.md#read) | **POST** /read | Reading
-*FacternApi.FactsApi* | [**readInformation**](docs/FactsApi.md#readInformation) | **POST** /readinformation | Read Information
-*FacternApi.FactsApi* | [**replaceInformation**](docs/FactsApi.md#replaceInformation) | **POST** /replaceinformation | Replace
-*FacternApi.FactsApi* | [**requestPermission**](docs/FactsApi.md#requestPermission) | **POST** /requestpermission | Request Permission
-*FacternApi.FactsApi* | [**resetLogin**](docs/FactsApi.md#resetLogin) | **POST** /resetlogin | Changing Login Password
-*FacternApi.FactsApi* | [**searchAlias**](docs/FactsApi.md#searchAlias) | **POST** /searchalias | Search For Alias
-*FacternApi.FactsApi* | [**searchEntity**](docs/FactsApi.md#searchEntity) | **POST** /searchentity | Search For Entity
-*FacternApi.FactsApi* | [**settleAccount**](docs/FactsApi.md#settleAccount) | **POST** /settleaccount | Settle Account
-*FacternApi.FactsApi* | [**updateApplication**](docs/FactsApi.md#updateApplication) | **POST** /updateapplication | Resetting Application Secret
-*FacternApi.FactsApi* | [**updateStatus**](docs/FactsApi.md#updateStatus) | **POST** /updatestatus | Enabling/Disabling Nodes
-*FacternApi.FactsApi* | [**watch**](docs/FactsApi.md#watch) | **POST** /watch | Create Watch Trigger
-*FacternApi.FactsApi* | [**write**](docs/FactsApi.md#write) | **POST** /write | Writing by Template
+*FacternApi.FactsApi* | [**addMember**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#addMember) | **POST** /createmember | Create Member
+*FacternApi.FactsApi* | [**bid**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#bid) | **POST** /createbid | Create Bid
+*FacternApi.FactsApi* | [**callDelete**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#callDelete) | **POST** /delete | Deleting
+*FacternApi.FactsApi* | [**createAlias**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#createAlias) | **POST** /createalias | Create Alias
+*FacternApi.FactsApi* | [**createApplication**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#createApplication) | **POST** /createapplication | Create Application
+*FacternApi.FactsApi* | [**createDomain**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#createDomain) | **POST** /createdomain | Create Domain
+*FacternApi.FactsApi* | [**createEntity**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#createEntity) | **POST** /createentity | Create Entity
+*FacternApi.FactsApi* | [**createField**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#createField) | **POST** /createfield | Create Field
+*FacternApi.FactsApi* | [**createFilter**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#createFilter) | **POST** /createfilter | Create Filter
+*FacternApi.FactsApi* | [**createGroup**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#createGroup) | **POST** /creategroup | Create Group
+*FacternApi.FactsApi* | [**createInformation**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#createInformation) | **POST** /createinformation | Create Information
+*FacternApi.FactsApi* | [**createInterface**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#createInterface) | **POST** /createinterface | Create Interface
+*FacternApi.FactsApi* | [**createLabelList**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#createLabelList) | **POST** /createlabellist | Create Label List
+*FacternApi.FactsApi* | [**createLogin**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#createLogin) | **POST** /createlogin | Create Login
+*FacternApi.FactsApi* | [**createMirror**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#createMirror) | **POST** /createmirror | Create Mirror
+*FacternApi.FactsApi* | [**createPrice**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#createPrice) | **POST** /createprice | Create Price
+*FacternApi.FactsApi* | [**createScope**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#createScope) | **POST** /createscope | Create Scope
+*FacternApi.FactsApi* | [**createStatement**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#createStatement) | **POST** /createstatement | Create Statement
+*FacternApi.FactsApi* | [**createTemplate**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#createTemplate) | **POST** /createtemplate | Create Template
+*FacternApi.FactsApi* | [**deleteNode**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#deleteNode) | **POST** /deletenode | Delete Node
+*FacternApi.FactsApi* | [**describe**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#describe) | **POST** /describe | Describe
+*FacternApi.FactsApi* | [**history**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#history) | **POST** /history | History
+*FacternApi.FactsApi* | [**label**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#label) | **POST** /label | Label a Node
+*FacternApi.FactsApi* | [**obliterate**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#obliterate) | **POST** /obliterate | Obliterating Information Nodes
+*FacternApi.FactsApi* | [**permission**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#permission) | **POST** /permission | Create Permission
+*FacternApi.FactsApi* | [**read**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#read) | **POST** /read | Reading
+*FacternApi.FactsApi* | [**readInformation**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#readInformation) | **POST** /readinformation | Read Information
+*FacternApi.FactsApi* | [**replaceInformation**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#replaceInformation) | **POST** /replaceinformation | Replace
+*FacternApi.FactsApi* | [**requestPermission**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#requestPermission) | **POST** /requestpermission | Request Permission
+*FacternApi.FactsApi* | [**resetLogin**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#resetLogin) | **POST** /resetlogin | Changing Login Password
+*FacternApi.FactsApi* | [**searchAlias**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#searchAlias) | **POST** /searchalias | Search For Alias
+*FacternApi.FactsApi* | [**searchEntity**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#searchEntity) | **POST** /searchentity | Search For Entity
+*FacternApi.FactsApi* | [**settleAccount**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#settleAccount) | **POST** /settleaccount | Settle Account
+*FacternApi.FactsApi* | [**updateApplication**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#updateApplication) | **POST** /updateapplication | Resetting Application Secret
+*FacternApi.FactsApi* | [**updateStatus**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#updateStatus) | **POST** /updatestatus | Enabling/Disabling Nodes
+*FacternApi.FactsApi* | [**watch**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#watch) | **POST** /watch | Create Watch Trigger
+*FacternApi.FactsApi* | [**write**](https://github.com/Factern/factern-client-javascript/blob/master/docs/FactsApi.md#write) | **POST** /write | Writing by Template
 
 
 ## Documentation for Models
