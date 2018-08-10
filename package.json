@@ -1,6 +1,6 @@
 {
   "name": "@factern/factern-client",
-  "version": "0.9.7",
+  "version": "0.9.8",
   "description": "Factern API v2 Client",
   "main": "dist/factern-client-bundle.js",
   "scripts": {
