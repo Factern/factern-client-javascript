@@ -2,7 +2,7 @@
   "name": "@factern/factern-client",
   "version": "0.9.10",
   "description": "Factern API v2 Client",
-  "main": "dist/factern-client-bundle.js",
+  "main": "dist/factern-client.js",
   "scripts": {
     "test": "mocha --timeout 15000 test -r jsdom-global/register"
   },
